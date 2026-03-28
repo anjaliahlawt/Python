@@ -1,4 +1,4 @@
- #function: is a block of code which perform a specific task and it is reusable and it is defined by def keyword and it can take input and return output.
+# #function: is a block of code which perform a specific task and it is reusable and it is defined by def keyword and it can take input and return output.
 
 
 def greet():
@@ -56,3 +56,23 @@ def cn():
  print(z)
 cn()
 print(z)
+
+# *args is used to pass a variable number of arguments to a function. It allows you to pass any number of arguments to a function, and they will be treated as a tuple.
+
+def add(*args):
+    s=0
+    for i in args:
+        s+=i
+    return s
+print(add(1,4,2,3))
+
+
+# **kwargs is used to pass a variable number of keyword arguments to a function. It allows you to pass any number of keyword arguments to a function, and they will be treated as a dictionary.
+def info(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
+info(name="Anjali",age=24,city="pune")
+
+## lambda function is an anonymous function which is defined by lambda keyword and it can take any number of arguments but it can only have one expression.
+square=lambda x:x*x
+print(square(5))
