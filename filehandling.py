@@ -19,8 +19,8 @@ file.close()
 
 #creating a file
 
-f=open("demo.txt","x")
-f.close()
+# f=open("demo.txt","x")
+# f.close()
 
 #writing a file : write in file and delte the write content
 
