@@ -28,10 +28,10 @@ def add_customer():
     # Email validation (@gmail.com)
     while True:
         email = input("Enter email: ")
-        if email.count("@") == 1 and email.index("@") > 1 and email.endswith("@gmail.com"):
+        if email.count("@") == 1 and email.index("@") > 0 and email.endswith("@gmail.com"):
             break
         else:
-            print("Invalid email(abc@gmail.com).")
+            print("Invalid email(a@gmail.com).")
 
     # Address validation
     while True:
@@ -43,23 +43,23 @@ def add_customer():
 
     # Phone number validation (digits only, 10 digits)
     while True:
-        phone = input("Enter phone number: ")
-        if phone.isdigit() and len(phone) == 10:
+        contact = input("Enter contact number: ")
+        if contact.isdigit() and len(contact) == 10:
             break
         else:
-            print("Invalid phone no.Enter 10 digit number.")
+            print("Invalid contact no.Enter 10 digit number.")
 
     
     customers[cid] = {
         "name": name,
         "email": email,
         "address": address,
-        "phone": phone
+        "contact": contact
     }
 
     print(f"Customer added successfully with ID: {cid}")
 
-#show customer
+l#show customer
 
 def show_customer():
     cid=int(input("id: "))
@@ -68,7 +68,7 @@ def show_customer():
         print(f"name: {customers[cid]['name']}")
         print(f"email: {customers[cid]['email']}")
         print(f"address: {customers[cid]['address']}")
-        print(f"phone: {customers[cid]['phone']}")
+        print(f"contact: {customers[cid]['contact']}")
     else:
         print("customer not found")
 
@@ -84,8 +84,10 @@ def show_all_customers():
         print(f"Name: {data['name']}")
         print(f"Email: {data['email']}")
         print(f"Address: {data['address']}")
-        print(f"Phone: {data['phone']}")
+        print(f"Contact: {data['contact']}")
         print("-" * 20)  
+
+
 
 
 
@@ -104,7 +106,7 @@ def update_customer():
         name = input(f"Enter name ({customer['name']}): ")
         email = input(f"Enter email ({customer['email']}): ")
         address = input(f"Enter address ({customer['address']}): ")
-        phone = input(f"Enter phone ({customer['phone']}): ")
+        contact = input(f"Enter contact ({customer['contact']}): ")
         
         # Update only if user entered something
         if name.strip() != "":
@@ -113,8 +115,8 @@ def update_customer():
             customer["email"] = email
         if address.strip() != "":
             customer["address"] = address
-        if phone.strip() != "":
-            customer["phone"] = phone
+        if contact.strip() != "":
+            customer["contact"] = contact
         
         print("Customer updated successfully")
         

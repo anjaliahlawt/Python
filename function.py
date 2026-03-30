@@ -76,3 +76,5 @@ info(name="Anjali",age=24,city="pune")
 ## lambda function is an anonymous function which is defined by lambda keyword and it can take any number of arguments but it can only have one expression.
 square=lambda x:x*x
 print(square(5))
+
+print((lambda x,y:x+y)(3,4))
