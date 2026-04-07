@@ -4,6 +4,7 @@ customers={}
 unique_id=0
 
 
+
 #id generate
 
 def id_generate():
@@ -59,7 +60,7 @@ def add_customer():
 
     print(f"Customer added successfully with ID: {cid}")
 
-l#show customer
+#show customer
 
 def show_customer():
     cid=int(input("id: "))
